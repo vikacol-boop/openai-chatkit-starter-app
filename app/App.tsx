@@ -2,11 +2,8 @@
 
 import { useCallback } from "react";
 import { ChatKitPanel, type FactAction } from "@/components/ChatKitPanel";
-import { useColorScheme } from "@/hooks/useColorScheme";
 
 export default function App() {
-  const { scheme, setScheme } = useColorScheme();
-
   const handleWidgetAction = useCallback(async (action: FactAction) => {
     if (process.env.NODE_ENV !== "production") {
       console.info("[ChatKitPanel] widget action", action);
@@ -21,6 +18,7 @@ export default function App() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white">
+      {/* Header */}
       <header className="w-full border-b border-white/10 bg-black/90">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
           <span className="text-lg font-semibold tracking-[0.25em]">
@@ -56,12 +54,20 @@ export default function App() {
 
         {/* Chat card */}
         <section className="rounded-3xl border border-white/15 bg-neutral-950/95 p-3 md:p-4">
-          <ChatKitPanel
-            theme={scheme}
-            onWidgetAction={handleWidgetAction}
-            onResponseEnd={handleResponseEnd}
-            onThemeRequest={setScheme}
-          />
+          <div className="mb-2 text-sm text-neutral-300">
+            Inicia el chat con nuestro agente B2B para recibir tu cotización
+            personalizada.
+          </div>
+          <div className="h-[620px] w-full">
+            <ChatKitPanel
+              theme="dark"
+              onWidgetAction={handleWidgetAction}
+              onResponseEnd={handleResponseEnd}
+              onThemeRequest={() => {
+                /* forzamos siempre modo oscuro */
+              }}
+            />
+          </div>
         </section>
       </div>
 
