@@ -61,10 +61,3 @@ chatkit-chat {
   height: 100%;
   background-color: #000000;
 }
-/* Force ChatKit to fill container and sit higher */
-chatkit-chat {
-  display: block;
-  height: calc(100% + 56px);   /* a bit taller so input is not cut */
-  transform: translateY(-40px); /* move whole chat content up */
-  background-color: #000000;
-}
