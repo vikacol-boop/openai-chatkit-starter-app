@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Force dark base for the whole app */
+/* Dark base for the whole app */
 :root {
   --background: #000000;
   --foreground: #f9fafb;
@@ -13,7 +13,6 @@
   color-scheme: dark;
 }
 
-/* Fallback – keep same dark palette */
 @media (prefers-color-scheme: dark) {
   :root:not([data-color-scheme]) {
     --background: #000000;
@@ -35,21 +34,7 @@ body {
   font-family: var(--font-sans);
 }
 
-/* --- ChatKit dark overrides --- */
-
-chatkit-chat {
-  --ck-color-bg-canvas: #000000;
-  --ck-color-bg-surface: ##303030;
-  --ck-color-bg-elevated: ##303030;
-  --ck-color-border-subtle: rgba(255, 255, 255, 0.16);
-  --ck-color-border-strong: rgba(255, 255, 255, 0.24);
-  --ck-color-text-primary: #a2a2a3;
-  --ck-color-text-subtle: #a2a2a3;
-  --ck-color-accent: ##303030;
-  --ck-radius-lg: 20px;
-}
-
-/* input / composer text inside chat = white */
+/* Chat input text white inside ChatKit */
 .ck-composer,
 .ck-composer * {
   color: #f9fafb !important;
