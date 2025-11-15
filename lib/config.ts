@@ -39,7 +39,7 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
     },
     accent: {
       // violeta como color de acción (botones, etc.)
-      primary: "#a855f7",
+      primary: "#8f8e91",
       level: 2,
     },
   },
