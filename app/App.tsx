@@ -40,15 +40,18 @@ export default function App() {
 
         {/* Chat first, then text */}
         <div className="px-4 pb-6 pt-4 md:px-6 md:pt-6">
-          <section className="h-[420px] md:h-[460px] w-full rounded-3xl border border-white/15 bg-black overflow-hidden">
-            <ChatKitPanel
-              theme="dark"
-              onWidgetAction={handleWidgetAction}
-              onResponseEnd={handleResponseEnd}
-              onThemeRequest={() => {
-                /* siempre oscuro */
-              }}
-            />
+          {/* CHAT PANEL */}
+          <section className="h-[520px] w-full rounded-3xl border border-white/15 bg-black overflow-hidden flex">
+            <div className="flex-1 bg-black">
+              <ChatKitPanel
+                theme="dark"
+                onWidgetAction={handleWidgetAction}
+                onResponseEnd={handleResponseEnd}
+                onThemeRequest={() => {
+                  /* siempre oscuro */
+                }}
+              />
+            </div>
           </section>
 
           {/* Text below chat */}
