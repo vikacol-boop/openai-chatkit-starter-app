@@ -7,29 +7,38 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
-    label: "What can you do?",
-    prompt: "What can you do?",
+    label: "Estoy interesado en pedidos B2B",
+    prompt:
+      "Estoy interesado en hacer pedidos B2B de VIKA Nicotine Pouches para mi negocio. Explícame cómo funciona el proceso, cantidades mínimas y precios por volumen.",
+    icon: "circle-question",
+  },
+  {
+    label: "Ya soy cliente y quiero hacer un pedido",
+    prompt:
+      "Ya soy cliente B2B de VIKA COLOMBIA y quiero hacer un nuevo pedido. Ayúdame a armar la orden con sabores y cantidades.",
     icon: "circle-question",
   },
 ];
 
-export const PLACEHOLDER_INPUT = "Ask anything...";
+export const PLACEHOLDER_INPUT =
+  "Escribe aquí tu consulta para el agente B2B...";
 
-export const GREETING = "How can I help you today?";
+export const GREETING =
+  "Hola, soy el agente de ventas B2B de VIKA COLOMBIA. ¿Eres una tienda, kiosco u otro negocio? Dime en qué ciudad estás y qué cantidades te interesan.";
 
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
     grayscale: {
       hue: 220,
       tint: 6,
-      shade: theme === "dark" ? -1 : -4,
+      shade: theme === "dark" ? -2 : -4, // más oscuro en modo dark
     },
     accent: {
-      primary: theme === "dark" ? "#f1f5f9" : "#0f172a",
-      level: 1,
+      // violeta corporativo para botones, highlights, etc.
+      primary: "#a855f7",
+      level: 2,
     },
   },
   radius: "round",
-  // Add other theme options here
-  // chatkit.studio/playground to explore config options
+  // si quieres más ajustes de tema, se agregan aquí
 });
