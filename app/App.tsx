@@ -2,6 +2,7 @@
 
 import { useCallback } from "react";
 import { ChatKitPanel, type FactAction } from "@/components/ChatKitPanel";
+// No useColorScheme – we force dark
 
 export default function App() {
   const handleWidgetAction = useCallback(async (action: FactAction) => {
@@ -24,9 +25,18 @@ export default function App() {
           <span className="text-sm font-semibold tracking-[0.25em]">
             VIKA COLOMBIA
           </span>
-          <span className="text-[10px] uppercase tracking-[0.25em] text-neutral-400">
-            Agente de ventas B2B
-          </span>
+
+          <div className="flex items-center gap-4">
+            <span className="hidden text-[10px] uppercase tracking-[0.25em] text-neutral-400 sm:inline">
+              Agente de ventas B2B
+            </span>
+            <a
+              href="https://vika-colombia.com"
+              className="rounded-full border border-white/20 px-3 py-1 text-[11px] font-medium tracking-wide text-neutral-100 hover:bg-white hover:text-black transition"
+            >
+              Volver al sitio web
+            </a>
+          </div>
         </div>
 
         {/* Main content */}
@@ -41,7 +51,17 @@ export default function App() {
             </h1>
             <p className="text-sm md:text-base text-neutral-200 mb-4">
               Asistente exclusivo para tiendas, kioscos, bares y otros negocios
-              que quieren vender VIKA Nicotine Pouches en Colombia.
+              que quieren vender VIKA Nicotine Pouches en Colombia. Aquí puedes
+              solicitar precios por volumen, condiciones mayoristas y coordinar
+              tu primer pedido.
+            </p>
+            <ul className="space-y-1 text-xs text-neutral-300">
+              <li>• Cotizaciones por sabor y cantidad</li>
+              <li>• Verificación de cuenta B2B existente</li>
+              <li>• Registro de nuevos clientes empresariales</li>
+            </ul>
+            <p className="mt-5 text-[11px] text-neutral-500">
+              Solo para mayores de 18 años. Uso exclusivo empresarial.
             </p>
           </section>
 
@@ -49,11 +69,11 @@ export default function App() {
           <section className="p-3 md:p-4">
             <div className="h-[560px] w-full rounded-3xl border border-white/15 bg-neutral-950/95">
               <ChatKitPanel
-                theme="dark"
+                theme="dark" // fuerza modo oscuro
                 onWidgetAction={handleWidgetAction}
                 onResponseEnd={handleResponseEnd}
                 onThemeRequest={() => {
-                  /* siempre oscuro */
+                  /* ignoramos peticiones de cambio de tema */
                 }}
               />
             </div>
