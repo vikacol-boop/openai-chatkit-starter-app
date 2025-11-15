@@ -41,8 +41,8 @@ export default function App() {
         {/* Chat first, then text */}
         <div className="px-4 pb-6 pt-4 md:px-6 md:pt-6">
           {/* CHAT PANEL */}
-          <section className="h-[520px] w-full rounded-3xl border border-white/15 bg-black overflow-hidden flex">
-            <div className="flex-1 bg-black">
+          <section className="h-[600px] md:h-[640px] w-full rounded-3xl border border-white/15 bg-black overflow-hidden">
+            <div className="h-full w-full bg-black">
               <ChatKitPanel
                 theme="dark"
                 onWidgetAction={handleWidgetAction}
