@@ -39,13 +39,13 @@ body {
 
 chatkit-chat {
   --ck-color-bg-canvas: #000000;
-  --ck-color-bg-surface: #050608;
-  --ck-color-bg-elevated: #050608;
+  --ck-color-bg-surface: ##303030;
+  --ck-color-bg-elevated: ##303030;
   --ck-color-border-subtle: rgba(255, 255, 255, 0.16);
   --ck-color-border-strong: rgba(255, 255, 255, 0.24);
-  --ck-color-text-primary: #f9fafb;
-  --ck-color-text-subtle: #9ca3af;
-  --ck-color-accent: #a855f7; /* violet accent, change if you want */
+  --ck-color-text-primary: #a2a2a3;
+  --ck-color-text-subtle: #a2a2a3;
+  --ck-color-accent: ##303030;
   --ck-radius-lg: 20px;
 }
 
