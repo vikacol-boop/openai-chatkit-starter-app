@@ -32,7 +32,7 @@ export const GREETING =
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
     grayscale: {
-      hue: 220,
+      hue: 0,
       tint: 6,
       // un poco más oscuro en modo dark
       shade: theme === "dark" ? -2 : -4,
