@@ -1,22 +1,33 @@
 @import "tailwindcss";
 
-/* Dark base for the whole app */
+/* Dark base for whole app */
 :root {
   --background: #000000;
-  --foreground: #f9fafb;
+  --foreground: #f5f5f5;
   color-scheme: dark;
+
+  /* ChatKit color tokens – all neutral grey/black */
+  --ck-color-bg-canvas: #000000;
+  --ck-color-bg-surface: #050505;
+  --ck-color-bg-elevated: #050505;
+  --ck-color-border-subtle: rgba(255, 255, 255, 0.15);
+  --ck-color-border-strong: rgba(255, 255, 255, 0.25);
+  --ck-color-text-primary: #f5f5f5;
+  --ck-color-text-subtle: #a3a3a3;
+  --ck-color-accent-soft: #262626;
+  --ck-color-accent-strong: #ffffff;
 }
 
 :root[data-color-scheme="dark"] {
   --background: #000000;
-  --foreground: #f9fafb;
+  --foreground: #f5f5f5;
   color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-color-scheme]) {
     --background: #000000;
-    --foreground: #f9fafb;
+    --foreground: #f5f5f5;
     color-scheme: dark;
   }
 }
@@ -34,8 +45,8 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Chat input text white inside ChatKit */
+/* Ensure composer text is white */
 .ck-composer,
 .ck-composer * {
-  color: #f9fafb !important;
+  color: #f5f5f5 !important;
 }
