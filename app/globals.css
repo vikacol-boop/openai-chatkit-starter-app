@@ -55,3 +55,9 @@ body {
   color: #f5f5f5;
   font-family: var(--font-sans);
 }
+/* Force ChatKit root to fill and stay black */
+chatkit-chat {
+  display: block;
+  height: 100%;
+  background-color: #000000;
+}
