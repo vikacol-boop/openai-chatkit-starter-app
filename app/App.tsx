@@ -41,17 +41,7 @@ export default function App() {
             </h1>
             <p className="text-sm md:text-base text-neutral-200 mb-4">
               Asistente exclusivo para tiendas, kioscos, bares y otros negocios
-              que quieren vender VIKA Nicotine Pouches en Colombia. Aquí puedes
-              solicitar precios por volumen, condiciones mayoristas y coordinar
-              tu primer pedido.
-            </p>
-            <ul className="space-y-1 text-xs text-neutral-300">
-              <li>• Cotizaciones por sabor y cantidad</li>
-              <li>• Verificación de cuenta B2B existente</li>
-              <li>• Registro de nuevos clientes empresariales</li>
-            </ul>
-            <p className="mt-5 text-[11px] text-neutral-500">
-              Solo para mayores de 18 años. Uso exclusivo empresarial.
+              que quieren vender VIKA Nicotine Pouches en Colombia.
             </p>
           </section>
 
