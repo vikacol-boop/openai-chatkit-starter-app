@@ -41,7 +41,7 @@ export default function App() {
         {/* Chat first, then text */}
         <div className="px-4 pb-6 pt-4 md:px-6 md:pt-6">
           {/* CHAT PANEL */}
-          <section className="h-[620px] md:h-[640px] w-full rounded-3xl border border-white/15 bg-black overflow-hidden">
+          <section className="h-[640px] md:h-[640px] w-full rounded-3xl border border-white/15 bg-black overflow-hidden">
             <div className="h-full w-full bg-black">
               <ChatKitPanel
                 theme="dark"
